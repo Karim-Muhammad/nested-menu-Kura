@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Nested-menu</title>
+  </head>
+  <body>
+    <header>
+      <nav class="menu-bar">
+        <ul>
+          <li>
+            <a href="#"><i class="fa-solid fa-house"></i> Home</a>
+          </li>
+          <li><a href="#">Languages</a></li>
+          <li class="nested-menu">
+            <a href="#">
+              <i class="fa-sharp fa-solid fa-file-video"></i> Courses
+            </a>
+            <div class="sub-menu">
+              <ul>
+                <li class="nested-menu">
+                  <a href="#">Front-End Developer</a>
+                  <div class="sub-menu">
+                    <ul>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>SASS</li>
+                      <li>Bootstrap</li>
+                      <li class="nested-menu">
+                        <a href="#">Javascript</a>
+                        <div class="sub-menu">
+                          <ul>
+                            <li>JQuery</li>
+                            <li>React</li>
+                            <li>Vue</li>
+                            <li>Angular</li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nested-menu">
+                  <a href="#">Back-End Developer</a>
+                  <div class="sub-menu">
+                    <ul>
+                      <li class="nested-menu">
+                        <a href="#">PHP</a>
+                        <div class="sub-menu">
+                          <ul>
+                            <li>Laravel</li>
+                            <li>Vue</li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>ASP.NET</li>
+                      <li>MySQL</li>
+                    </ul>
+                  </div>
+                </li>
+                <li><a href="#">Android Developer</a></li>
+                <li><a href="#">IOS Developer</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fa-solid fa-person-chalkboard"></i> Instructors</a
+            >
+          </li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main></main>
+
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* ------------------------------ Menu Section ------------------------------ */
+
+header {
+}
+header nav {
+}
+header nav ul {
+  width: fit-content;
+  margin: auto;
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+header nav ul li {
+  transition: all 0.4s;
+  padding: 30px;
+}
+
+header nav > ul > li:hover {
+  background-color: rgb(43, 203, 80);
+}
+
+ul li i {
+  margin-right: 5px;
+}
+
+.nested-menu {
+  position: relative;
+}
+.nested-menu .sub-menu {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  /* left: 100%; */
+  background-color: aliceblue;
+}
+.nested-menu .nested-menu:nth-child(2n) .sub-menu {
+  left: 100%;
+}
+.nested-menu .nested-menu:nth-child(2n + 1) .sub-menu {
+  right: 100%;
+}
+.nested-menu.active > ul > li {
+}
+.nested-menu.active > .sub-menu {
+  display: flex;
+}
+.nested-menu .sub-menu > ul {
+  display: flex;
+  flex-direction: column;
+}
+.nested-menu .sub-menu > ul > li {
+}
+
+/* ------------------------------ Main Section ------------------------------ */
+
+main {
+  /*cannot get assets previous root directory*/
+  /* background-image: url(../assets/Background-image-2.png); */
+  background-image: url(assets/Background-image.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+
+/* -------------------------------- Keyframes ------------------------------- */
