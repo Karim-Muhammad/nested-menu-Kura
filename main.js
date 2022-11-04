@@ -33,8 +33,15 @@ nested_menu.forEach((li) =>
   li.addEventListener("click", (ev) => {
     ev.stopPropagation();
     console.log(li.parentElement);
+    Array.from(li.parentElement.children).forEach((el) =>
+      el.classList.remove("active")
+    );
     li.classList.toggle("active");
   })
 );
 
 function toggle(li) {}
+
+window.document.addEventListener("click", () => {
+  Array.from(children).forEach((el) => el.classList.remove("active"));
+});
