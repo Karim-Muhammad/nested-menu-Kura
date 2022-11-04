@@ -17,6 +17,20 @@ a {
 header {
 }
 header nav {
+  padding: 0 10px;
+  background-color: #fff;
+}
+nav .fa-bars {
+  display: none;
+  transition: transform 0.3s;
+}
+nav .fa-bars.active {
+  transform: scale(0.6);
+  display: none;
+}
+nav .fa-bars.active + ul {
+  display: flex;
+  flex-direction: column;
 }
 header nav ul {
   width: fit-content;
@@ -40,14 +54,27 @@ ul li i {
 
 .nested-menu {
   position: relative;
+  transition: height 0.4s;
+}
+.nested-menu::before {
+  content: "\2b";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 500;
 }
 .nested-menu .sub-menu {
   display: none;
   width: 100%;
   position: absolute;
   top: 100%;
-  /* left: 100%; */
   background-color: aliceblue;
+}
+@media (max-width: 720px) {
+  .nested-menu .sub-menu {
+    position: relative;
+    left: 0 !important;
+    right: 0 !important;
+    top: 10px;
+  }
 }
 .nested-menu .nested-menu:nth-child(2n) .sub-menu {
   left: 100%;
@@ -66,6 +93,20 @@ ul li i {
 }
 .nested-menu .sub-menu > ul > li {
 }
+
+@media (max-width: 1100px) {
+  nav.menu-bar > .fa-bars {
+    font-size: 1.7rem;
+    width: fit-content;
+    margin-left: auto;
+    display: block;
+  }
+  nav.menu-bar > ul {
+    display: none;
+  }
+}
+
+/* ------------------------------- Responsive ------------------------------- */
 
 /* ------------------------------ Main Section ------------------------------ */
 

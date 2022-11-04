@@ -1,28 +1,7 @@
 const menu = document.querySelector(".menu-bar ul");
 const children = menu.children;
-
-// Close All Menus When Click in any where in Page.
-// window.document.addEventListener(
-//   "click",
-//   (ev) => {
-//     console.log(ev.target);
-//     if (ev.target !== document.querySelector("nav"))
-//       Array.from(children).forEach((li) => li.classList.remove("active"));
-//   },
-//   true
-// );
-
-// console.log(children.querySelector(".nested-menu"));
-// const nested_menu = Array.from(children).filter((li) => {
-//   return li.classList.contains("active");
-// });
-
-// nested_menu.forEach((el) => {
-//   el.addEventListener("click", (_) => {
-//     nested_menu.forEach((li) => li.classList.remove("active"));
-//     el.classList.add("active");
-//   });
-// });
+const barIcon = document.querySelector(".fa-bars");
+barIcon.addEventListener("click", () => barIcon.classList.toggle("active"));
 
 // Module
 
