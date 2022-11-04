@@ -126,7 +126,8 @@ ul li i {
 main {
   /*cannot get assets previous root directory*/
   /* background-image: url(../assets/Background-image-2.png); */
-  background-image: url(assets/Background-image.png);
+  /* background-image: url(assets/Background-image.png); */
+  background-image: url(front3.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
